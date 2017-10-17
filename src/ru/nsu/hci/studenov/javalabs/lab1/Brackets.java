@@ -7,10 +7,9 @@ public class Brackets {
     public static Boolean checkS() {
         Scanner s = new Scanner(System.in);
         String readFromKeyboard = s.nextLine();
-        int length = readFromKeyboard.length();
         int open = 0;
 
-        for (int i = 0; i < length; ++i) {
+        for (int i = 0; i < readFromKeyboard.length; ++i) {
             if (readFromKeyboard.charAt(i) == '(') {
                 ++open;
             } else {
