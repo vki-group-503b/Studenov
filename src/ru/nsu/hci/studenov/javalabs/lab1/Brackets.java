@@ -9,7 +9,7 @@ public class Brackets {
         String readFromKeyboard = s.nextLine();
         int open = 0;
 
-        for (int i = 0; i < readFromKeyboard.length; ++i) {
+        for (int i = 0; i < readFromKeyboard.length(); ++i) {
             if (readFromKeyboard.charAt(i) == '(') {
                 ++open;
             } else {
