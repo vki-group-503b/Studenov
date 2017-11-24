@@ -34,7 +34,7 @@ public class NumRepository {
     public static double MedianOfArray() {
         Arrays.sort(array);
         if ((double) array.length % 2.0 == 0.0)
-            return (double) (array[length / 2] + array[length / 2 - 1]) / 2;
+            return (array[length / 2] + array[length / 2 - 1]) / 2;
         else
             return array[length / 2];
     }

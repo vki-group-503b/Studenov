@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class DataFile {
     public static void main(String[] args) throws FileNotFoundException {
         String s = File.separator;  //separator
-        String path = (s + "Users" + s + "vened" + s + "IdeaProjects" + s + "javalabs" + s + "src" + s + "ru" + s + "nsu" + s + "hci" + s + "studenov" + s + "javalabs" + s + "lab4" + s + "text");
+        String path = "text" ;
         File file = new File(path);
         Scanner scanner = new Scanner(file);
         int numberLines = 0;
