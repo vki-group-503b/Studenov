@@ -6,7 +6,8 @@ public class Formatter {
     private int begin = 0;
     private int endForBegin = 0;
 
-    private Formatter() {}
+    private Formatter() {
+    }
 
     private String format(String str, boolean flag, Object[] words) {
         int end = 0;
@@ -28,7 +29,6 @@ public class Formatter {
 
         if (begin < str.length())
             sb.append(str.substring(begin, str.length()));
-        
 
         return sb.toString();
     }
@@ -37,6 +37,18 @@ public class Formatter {
         sb.append(str.substring(begin, end - 1));
         sb.append(word);
     }
+
+    private int parseNumber(String str, int begin) {
+        int end = str.indexOf('}', begin);
+
+        this.endForBegin = end;
+        return Integer.parseInt(str, begin + 1, end, 10);
+    }
+
+    public static String format(String formatString, Object... arguments) {
+        return new Formatter().format(formatString, true, arguments);
+    }
+}
 
     private int parseNumber(String str, int begin) {
         int end = str.indexOf('}', begin);
